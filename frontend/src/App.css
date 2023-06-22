@@ -4,57 +4,75 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "secular One";
+  background-color: #252627;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* p,
+li {
+  font-family: "titillium";
+} */
+
+#checkbox {
+  display: none;
 }
 
-.App {
-  text-align: center;
+.toggle {
+  position: relative;
+  cursor: pointer;
+  margin: auto;
+  display: block;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: calc(2px / 2);
+  background: #08fdd8;
+  opacity: 0.8;
+  color: inherit;
+  opacity: 1;
+  transition: none 0.35s cubic-bezier(0.5, -0.35, 0.35, 1.5) 0s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/***** Spin Animation *****/
+
+.bar--top {
+  bottom: calc(50% + 8px + 2px / 2);
+  transition-property: bottom, transform;
+  transition-delay: calc(0s + 0.35s), 0s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bar--middle {
+  top: calc(50% - 2px / 2);
+  transition-property: opacity;
+  transition-delay: calc(0s + 0.35s);
 }
 
-.App-link {
-  color: #61dafb;
+.bar--bottom {
+  top: calc(50% + 8px + 2px / 2);
+  transition-property: top, transform;
+  transition-delay: calc(0s + 0.35s), 0s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#checkbox:checked + .toggle .bar--top {
+  bottom: calc(50% - 2px / 2);
+  transform: rotate(135deg);
+  transition-delay: 0s, calc(0s + 0.35s);
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+#checkbox:checked + .toggle .bar--middle {
+  opacity: 0;
+  transition-duration: 0s;
+  transition-delay: calc(0s + 0.35s);
+}
+
+#checkbox:checked + .toggle .bar--bottom {
+  top: calc(50% - 2px / 2);
+  transform: rotate(225deg);
+  transition-delay: 0s, calc(0s + 0.35s);
 }
