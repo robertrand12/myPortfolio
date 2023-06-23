@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import sunIcon from "../assets/icons/sun.png";
+// import sunIcon from "../assets/icons/sun.png";
 
 export default function HeaderMobile() {
   const [isVisibleMenu, setIsVisibleMenu] = useState(false);
@@ -25,7 +25,7 @@ export default function HeaderMobile() {
             <div className="bar bar--bottom" />
           </label>
         </button>
-        <img className="w-7 h-7" src={sunIcon} alt="sun" />
+        {/* <img className="w-7 h-7" src={sunIcon} alt="sun" /> */}
       </div>
       <ul
         className={`md:hidden flex flex-col justify-evenly items-center mt-16 fixed duration-700 ease-in-out bg-[#3F3F3F] w-full rounded-b-lg z-30  ${
