@@ -98,9 +98,9 @@ export default function Navbar() {
       >
         {({ isActive }) => (
           <div
-            className={`pt-3 ${
+            className={`pt-3  ${
               isActive
-                ? " text-[#08FDD8]/80"
+                ? " text-[#08FDD8]/80 "
                 : " fill-white/70 hover:fill-[#08FDD8]/80 "
             }`}
           >

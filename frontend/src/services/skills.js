@@ -11,12 +11,7 @@ const skills = [
   {
     id: 2,
     title: "Back-end",
-    stack: [
-      "NodeJs / Express",
-      "php (bases)",
-      "python (bases)",
-      "java (bases)",
-    ],
+    stack: ["NodeJs / Express", "php", "python (bases)", "java (bases)"],
   },
   {
     id: 3,
