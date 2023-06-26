@@ -15,6 +15,9 @@ const main = (req, res, next) => {
         user: EMAIL_ADRESS,
         pass: EMAIL_PASSWORD,
       },
+      tls: {
+        ciphers: "SSLv3",
+      },
     })
     .sendMail({
       from: `${data.name} <${data.email}>`,
@@ -44,6 +47,9 @@ const autoMail = (req, res) => {
       auth: {
         user: EMAIL_ADRESS,
         pass: EMAIL_PASSWORD,
+      },
+      tls: {
+        ciphers: "SSLv3",
       },
     })
     .sendMail({
