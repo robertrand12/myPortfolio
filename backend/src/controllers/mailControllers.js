@@ -1,7 +1,7 @@
 require("dotenv").config();
 const nodemailer = require("nodemailer");
 
-const { EMAIL_ADRESS, EMAIL_PASSWORD } = process.env;
+const { EMAIL_ADRESS, EMAIL_PASSWORD, EMAIL_PORT } = process.env;
 
 const main = (req, res, next) => {
   const data = req.body;
@@ -9,7 +9,7 @@ const main = (req, res, next) => {
   nodemailer
     .createTransport({
       host: "smtp.orange.fr",
-      port: 465,
+      port: EMAIL_PORT,
       secure: true,
       auth: {
         user: EMAIL_ADRESS,
@@ -39,7 +39,7 @@ const autoMail = (req, res) => {
   nodemailer
     .createTransport({
       host: "smtp.orange.fr",
-      port: 465,
+      port: EMAIL_PORT,
       secure: true,
       auth: {
         user: EMAIL_ADRESS,
