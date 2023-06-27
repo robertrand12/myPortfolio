@@ -10,7 +10,7 @@ const main = (req, res, next) => {
     .createTransport({
       host: "smtp.orange.fr",
       port: EMAIL_PORT,
-      secure: false,
+      secure: true,
       auth: {
         user: EMAIL_ADRESS,
         pass: EMAIL_PASSWORD,
@@ -44,7 +44,7 @@ const autoMail = (req, res) => {
     .createTransport({
       host: "smtp.orange.fr",
       port: EMAIL_PORT,
-      secureConnection: false,
+      secure: true,
       auth: {
         user: EMAIL_ADRESS,
         pass: EMAIL_PASSWORD,
