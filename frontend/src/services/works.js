@@ -33,6 +33,13 @@ import serenityPC1 from "../assets/serenity/PC/serenityPC1.png";
 import serenityPC2 from "../assets/serenity/PC/serenityPC2.png";
 import serenityPC3 from "../assets/serenity/PC/serenityPC3.png";
 import serenityPC4 from "../assets/serenity/PC/serenityPC4.png";
+import serenityPC5 from "../assets/serenity/PC/serenityPC5.png";
+import serenityPC6 from "../assets/serenity/PC/serenityPC6.png";
+import emmausPC1 from "../assets/emmaus-connect/emmausPC1.png";
+import emmausPC2 from "../assets/emmaus-connect/emmausPC2.png";
+import emmausPC3 from "../assets/emmaus-connect/emmausPC3.png";
+import emmausPC4 from "../assets/emmaus-connect/emmausPC4.png";
+import emmausPC5 from "../assets/emmaus-connect/emmausPC5.png";
 
 const works = [
   {
@@ -91,7 +98,16 @@ const works = [
   {
     id: 4,
     siteTitle: "serenity",
-    stacks: ["React", "Express", "MySql", "Leaflet", "NodeJS", "Tailwind"],
+    stacks: [
+      "React",
+      "Express",
+      "MySql",
+      "Leaflet",
+      "NodeJS",
+      "Tailwind",
+      "Nodemailer",
+      "Multer",
+    ],
     descriptions: [
       "Application permettant à un patient de préparer son intervention en suivant une procédure établie par le praticien.",
       "Connexion sécurisée pour tous les utilisateurs.",
@@ -101,8 +117,30 @@ const works = [
     ],
     time: "Projet serenity / 10 semaines - projet en cours",
     imgMobile: [serenity1, serenity2, serenity3, serenity4, serenity5],
-    imgPC: [serenityPC1, serenityPC2, serenityPC3, serenityPC4],
+    imgPC: [
+      serenityPC1,
+      serenityPC2,
+      serenityPC3,
+      serenityPC4,
+      serenityPC5,
+      serenityPC6,
+    ],
     github: "https://github.com/WildCodeSchool/2023-02-JS-LaLoupe-Serenity",
+  },
+  {
+    id: 5,
+    siteTitle: "Emmaus-connect",
+    stacks: ["React", "Express", "MySql", "NodeJS", "Nodemailer", "Multer"],
+    descriptions: [
+      "Application permettant à un bénévole d'Emmaüs de renseigner les informations d'un téléphone afin de l'évaluer selon des critères définis par l'administateur.",
+      "Connexion sécurisée pour tous les bénévoles et administrateurs.",
+      "Interface bénévole : accés à une base de données de modèles de téléphones et à un formulaire pour renseigner les caractéristiques (RAM, mémoire, état général...).",
+      "Interface administrateur : gestion et administration des bénévoles, des modèles de téléphones et de leurs critères d'évaluation",
+    ],
+    time: "Hackathon Emmaus-connect / 2 jours",
+    imgMobile: [],
+    imgPC: [emmausPC1, emmausPC2, emmausPC3, emmausPC4, emmausPC5],
+    github: "https://github.com/robertrand12/hackaton_2",
   },
 ];
 
